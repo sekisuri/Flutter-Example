@@ -28,8 +28,8 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title:  Text('제목'),
       ),
-      body: GridView.count(
-        crossAxisCount: 3,
+      body: PageView(
+
         children: <Widget>[
           Container(
             color: Colors.red,
