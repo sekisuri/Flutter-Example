@@ -25,20 +25,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          title: Text('Home'),
+      appBar: AppBar(
+        title: Text('Center'),
+     
+      ),
+      body: Center(
+        child: Container(
+          color: Colors.red,
+          width: 100,
+          height: 100,
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.person),
-          title: Text('Profile'),
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.notifications),
-          title: Text('Notificatio'),
-        ),
-      ]),
+      ),
     );
   }
 }
