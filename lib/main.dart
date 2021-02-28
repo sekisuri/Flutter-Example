@@ -28,26 +28,29 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title:  Text('제목'),
       ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
+      body: GridView.count(
+        crossAxisCount: 3,
         children: <Widget>[
-          ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Home'),
-            trailing: Icon(Icons.navigate_next),
-            onTap: (){},
+          Container(
+            color: Colors.red,
+            width: 100,
+            height: 100,
+            padding: const EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(8.0),
           ),
-          ListTile(
-            leading: Icon(Icons.event),
-            title: Text('Event'),
-            trailing: Icon(Icons.navigate_next),
-            onTap: (){},
+          Container(
+            color: Colors.blue,
+            width: 100,
+            height: 100,
+            padding: const EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(8.0),
           ),
-          ListTile(
-            leading: Icon(Icons.camera),
-            title: Text('Camera'),
-            trailing: Icon(Icons.navigate_next),
-            onTap: (){},
+          Container(
+            color: Colors.green,
+            width: 100,
+            height: 100,
+            padding: const EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(8.0),
           ),
         ],
       ),
