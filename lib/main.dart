@@ -29,7 +29,10 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title:  Text('제목'),
       ),
-      body: Column(
+      body: Row(
+        mainAxisSize: MainAxisSize.max, // 가로로 꽉 채우기
+        mainAxisAlignment: MainAxisAlignment.center, // 가로 방향으로 가운데 정렬하기
+        crossAxisAlignment: CrossAxisAlignment.center, // 세로 방향으로 가운데 정렬
         children: <Widget>[
           Container(
             color: Colors.red,
