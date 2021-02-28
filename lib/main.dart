@@ -24,35 +24,25 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title:  Text('제목'),
-      ),
-      body: PageView(
-
-        children: <Widget>[
-          Container(
-            color: Colors.red,
-            width: 100,
-            height: 100,
-            padding: const EdgeInsets.all(8.0),
-            margin: const EdgeInsets.all(8.0),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Tab'),
+          bottom: TabBar(
+            tabs: <Widget>[
+              Tab(icon: Icon(Icons.tag_faces)),
+              Tab(text: '메뉴2'),
+              Tab(icon: Icon(Icons.info), text: '메뉴3'),
+            ],
           ),
-          Container(
-            color: Colors.blue,
-            width: 100,
-            height: 100,
-            padding: const EdgeInsets.all(8.0),
-            margin: const EdgeInsets.all(8.0),
-          ),
-          Container(
-            color: Colors.green,
-            width: 100,
-            height: 100,
-            padding: const EdgeInsets.all(8.0),
-            margin: const EdgeInsets.all(8.0),
-          ),
-        ],
+        ),
+        body: TabBarView(
+            children: <Widget>[
+              Container(color: Colors.yellow,),
+              Container(color: Colors.orange,),
+              Container(color: Colors.red,),
+            ]),
       ),
     );
   }
